@@ -132,6 +132,15 @@ resource_pool:
     provider: <%= provider %>
     <% if provider.downcase == "local" %>
     local_root: <%= p("ccng.resource_pool.fog_connection.local_root") %>
+    <% elsif provider.downcase == "hp" %>
+    hp_access_key: <%= p("ccng.resource_pool.fog_connection.hp_access_key") %>
+    hp_secret_key: <%= p("ccng.resource_pool.fog_connection.hp_secret_key") %>
+    hp_tenant_id: <%= p("ccng.resource_pool.fog_connection.hp_tenant_id") %>
+    hp_auth_uri: <%= p("ccng.resource_pool.fog_connection.hp_auth_uri") %>
+    hp_use_upass_auth_style: <%= p("ccng.resource_pool.fog_connection.hp_use_upass_auth_style") %>
+    hp_avl_zone: <%= p("ccng.resource_pool.fog_connection.hp_avl_zone") %>
+    hp_auth_version: <%= p("ccng.resource_pool.fog_connection.hp_auth_version") %>
+    os_account_meta_temp_url_key: <%= p("ccng.resource_pool.fog_connection.os_account_meta_temp_url_key") %>
     <% else %>
     aws_access_key_id: <%= p("ccng.resource_pool.fog_connection.aws_access_key_id") %>
     aws_secret_access_key: <%= p("ccng.resource_pool.fog_connection.aws_secret_access_key") %>
@@ -151,6 +160,15 @@ packages:
     provider: <%= provider %>
     <% if provider.downcase == "local" %>
     local_root: <%= p("ccng.packages.fog_connection.local_root") %>
+    <% elsif provider.downcase == "hp" %>
+    hp_access_key: <%= p("ccng.packages.fog_connection.hp_access_key") %>
+    hp_secret_key: <%= p("ccng.packages.fog_connection.hp_secret_key") %>
+    hp_tenant_id: <%= p("ccng.packages.fog_connection.hp_tenant_id") %>
+    hp_auth_uri: <%= p("ccng.packages.fog_connection.hp_auth_uri") %>
+    hp_use_upass_auth_style: <%= p("ccng.packages.fog_connection.hp_use_upass_auth_style") %>
+    hp_avl_zone: <%= p("ccng.packages.fog_connection.hp_avl_zone") %>
+    hp_auth_version: <%= p("ccng.packages.fog_connection.hp_auth_version") %>
+    os_account_meta_temp_url_key: <%= p("ccng.packages.fog_connection.os_account_meta_temp_url_key") %>
     <% else %>
     aws_access_key_id: <%= p("ccng.packages.fog_connection.aws_access_key_id") %>
     aws_secret_access_key: <%= p("ccng.packages.fog_connection.aws_secret_access_key") %>
@@ -170,6 +188,15 @@ droplets:
     provider: <%= provider %>
     <% if provider.downcase == "local" %>
     local_root: <%= p("ccng.droplets.fog_connection.local_root") %>
+    <% elsif provider.downcase == "hp" %>
+    hp_access_key: <%= p("ccng.droplets.fog_connection.hp_access_key") %>
+    hp_secret_key: <%= p("ccng.droplets.fog_connection.hp_secret_key") %>
+    hp_tenant_id: <%= p("ccng.droplets.fog_connection.hp_tenant_id") %>
+    hp_auth_uri: <%= p("ccng.droplets.fog_connection.hp_auth_uri") %>
+    hp_use_upass_auth_style: <%= p("ccng.droplets.fog_connection.hp_use_upass_auth_style") %>
+    hp_avl_zone: <%= p("ccng.droplets.fog_connection.hp_avl_zone") %>
+    hp_auth_version: <%= p("ccng.droplets.fog_connection.hp_auth_version") %>
+    os_account_meta_temp_url_key: <%= p("ccng.droplets.fog_connection.os_account_meta_temp_url_key") %>
     <% else %>
     aws_access_key_id: <%= p("ccng.droplets.fog_connection.aws_access_key_id") %>
     aws_secret_access_key: <%= p("ccng.droplets.fog_connection.aws_secret_access_key") %>
@@ -189,6 +216,15 @@ buildpacks:
     provider: <%= provider %>
     <% if provider.downcase == "local" %>
     local_root: <%= p("ccng.buildpacks.fog_connection.local_root") %>
+    <% elsif provider.downcase == "hp" %>
+    hp_access_key: <%= p("ccng.buildpacks.fog_connection.hp_access_key") %>
+    hp_secret_key: <%= p("ccng.buildpacks.fog_connection.hp_secret_key") %>
+    hp_tenant_id: <%= p("ccng.buildpacks.fog_connection.hp_tenant_id") %>
+    hp_auth_uri: <%= p("ccng.buildpacks.fog_connection.hp_auth_uri") %>
+    hp_use_upass_auth_style: <%= p("ccng.buildpacks.fog_connection.hp_use_upass_auth_style") %>
+    hp_avl_zone: <%= p("ccng.buildpacks.fog_connection.hp_avl_zone") %>
+    hp_auth_version: <%= p("ccng.buildpacks.fog_connection.hp_auth_version") %>
+    os_account_meta_temp_url_key: <%= p("ccng.buildpacks.fog_connection.os_account_meta_temp_url_key") %>
     <% else %>
     aws_access_key_id: <%= p("ccng.buildpacks.fog_connection.aws_access_key_id") %>
     aws_secret_access_key: <%= p("ccng.buildpacks.fog_connection.aws_secret_access_key") %>

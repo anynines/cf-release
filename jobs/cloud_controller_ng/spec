@@ -179,8 +179,27 @@ properties:
   description: "Directory (bucket) used store app resources.  It does not have be pre-created."
   default: "cc-resources"
  ccng.resource_pool.fog_connection.provider:
-  description: "Local for shared resources on NFS.  AWS to place them in S3."
+  description: "Local for shared resources on NFS. AWS to place them in S3. HP to use OpenStack Swift."
   default: "Local"
+ ccng.resource_pool.fog_connection.hp_access_key:
+  description: "OpenStack username to access Swift service."
+ ccng.resource_pool.fog_connection.hp_secret_key:
+  description: "OpenStack password to access Swift."
+ ccng.resource_pool.fog_connection.hp_tenant_id:
+  description: "OpenStack tenant id (not the tenant name) to access Swift. "
+ ccng.resource_pool.fog_connection.hp_auth_uri:
+  description: "Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
+ ccng.resource_pool.fog_connection.hp_use_upass_auth_style:
+  description: "Use the upass authentication style? Most likely: yes."
+  default: true
+ ccng.resource_pool.fog_connection.hp_avl_zone:
+  description: "OpenStack availability zone."
+  default: "nova"
+ ccng.resource_pool.fog_connection.hp_auth_version:
+  description: "OpenStack authentication version."
+  default: "v2"
+ ccng.resource_pool.fog_connection.os_account_meta_temp_url_key:
+  description: "Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."
  ccng.resource_pool.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the resources bucket"
  ccng.resource_pool.fog_connection.aws_secret_access_key:
@@ -202,8 +221,27 @@ properties:
   description: "Directory (bucket) used store app packages.  It does not have be pre-created."
   default: "cc-packages"
  ccng.packages.fog_connection.provider:
-  description: "Local for shared resources on NFS. AWS to place them in S3."
+  description: "Local for shared resources on NFS. AWS to place them in S3. HP to use OpenStack Swift."
   default: "Local"
+ ccng.packages.fog_connection.hp_access_key:
+  description: "OpenStack username to access Swift service."
+ ccng.packages.fog_connection.hp_secret_key:
+  description: "OpenStack password to access Swift."
+ ccng.packages.fog_connection.hp_tenant_id:
+  description: "OpenStack tenant id (not the tenant name) to access Swift. "
+ ccng.packages.fog_connection.hp_auth_uri:
+  description: "Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
+ ccng.packages.fog_connection.hp_use_upass_auth_style:
+  description: "Use the upass authentication style? Most likely: yes."
+  default: true
+ ccng.packages.fog_connection.hp_avl_zone:
+  description: "OpenStack availability zone."
+  default: "nova"
+ ccng.packages.fog_connection.hp_auth_version:
+  description: "OpenStack authentication version."
+  default: "v2"
+ ccng.packages.fog_connection.os_account_meta_temp_url_key:
+  description: "Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."  
  ccng.packages.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the packages bucket"
  ccng.packages.fog_connection.aws_secret_access_key:
@@ -227,6 +265,25 @@ properties:
  ccng.droplets.fog_connection.provider:
   description: "Local for droplets on NFS. AWS to place them in S3."
   default: "Local"
+ ccng.droplets.fog_connection.hp_access_key:
+  description: "OpenStack username to access Swift service."
+ ccng.droplets.fog_connection.hp_secret_key:
+  description: "OpenStack password to access Swift."
+ ccng.droplets.fog_connection.hp_tenant_id:
+  description: "OpenStack tenant id (not the tenant name) to access Swift. "
+ ccng.droplets.fog_connection.hp_auth_uri:
+  description: "Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
+ ccng.droplets.fog_connection.hp_use_upass_auth_style:
+  description: "Use the upass authentication style? Most likely: yes."
+  default: true
+ ccng.droplets.fog_connection.hp_avl_zone:
+  description: "OpenStack availability zone."
+  default: "nova"
+ ccng.droplets.fog_connection.hp_auth_version:
+  description: "OpenStack authentication version."
+  default: "v2"
+ ccng.droplets.fog_connection.os_account_meta_temp_url_key:
+  description: "Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."
  ccng.droplets.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the droplets bucket"
  ccng.droplets.fog_connection.aws_secret_access_key:
@@ -250,6 +307,25 @@ properties:
  ccng.buildpacks.fog_connection.provider:
   description: "Local for buildpacks on NFS. AWS to place them in S3."
   default: "Local"
+ ccng.buildpacks.fog_connection.hp_access_key:
+  description: "OpenStack username to access Swift service."
+ ccng.buildpacks.fog_connection.hp_secret_key:
+  description: "OpenStack password to access Swift."
+ ccng.buildpacks.fog_connection.hp_tenant_id:
+  description: "OpenStack tenant id (not the tenant name) to access Swift. "
+ ccng.buildpacks.fog_connection.hp_auth_uri:
+  description: "Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
+ ccng.buildpacks.fog_connection.hp_use_upass_auth_style:
+  description: "Use the upass authentication style? Most likely: yes."
+  default: true
+ ccng.buildpacks.fog_connection.hp_avl_zone:
+  description: "OpenStack availability zone."
+  default: "nova"
+ ccng.buildpacks.fog_connection.hp_auth_version:
+  description: "OpenStack authentication version."
+  default: "v2"
+ ccng.buildpacks.fog_connection.os_account_meta_temp_url_key:
+  description: "Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."  
  ccng.buildpacks.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the buildpacks bucket"
  ccng.buildpacks.fog_connection.aws_secret_access_key:
@@ -263,7 +339,7 @@ properties:
  ccng.buildpacks.cdn.private_key:
   description: "Private key for signing download URIs"
   default: ""
- ccng.buildpacks.cdn.key_pair_id:
+ ccng.buildpacks.cdn.key_pair_id://
   description: "Key pair name for signed download URIs"
   default: ""
 
