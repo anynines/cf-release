@@ -339,7 +339,7 @@ properties:
  ccng.buildpacks.cdn.private_key:
   description: "Private key for signing download URIs"
   default: ""
- ccng.buildpacks.cdn.key_pair_id://
+ ccng.buildpacks.cdn.key_pair_id:
   description: "Key pair name for signed download URIs"
   default: ""
 
