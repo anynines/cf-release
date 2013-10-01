@@ -204,9 +204,9 @@ properties:
   description: "Fog provider OpenStack - Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
  ccng.resource_pool.fog_connection.openstack_username:
   description: "Fog provider OpenStack - OpenStack username to access Swift service."
- ccng.resource_pool.fog_connection.openstack_api_key
+ ccng.resource_pool.fog_connection.openstack_api_key:
   description: "Fog provider OpenStack - OpenStack password to access Swift."
- ccng.resource_pool.fog_connection.openstack_temp_url_key
+ ccng.resource_pool.fog_connection.openstack_temp_url_key:
   description: "Fog provider OpenStack - Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."
  ccng.resource_pool.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the resources bucket"
@@ -254,9 +254,9 @@ properties:
   description: "Fog provider OpenStack - Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
  ccng.packages.fog_connection.openstack_username:
   description: "Fog provider OpenStack - OpenStack username to access Swift service."
- ccng.packages.fog_connection.openstack_api_key
+ ccng.packages.fog_connection.openstack_api_key:
   description: "Fog provider OpenStack - OpenStack password to access Swift."
- ccng.packages.fog_connection.openstack_temp_url_key
+ ccng.packages.fog_connection.openstack_temp_url_key:
   description: "Fog provider OpenStack - Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."
  ccng.packages.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the packages bucket"
@@ -304,9 +304,9 @@ properties:
   description: "Fog provider OpenStack - Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
  ccng.droplets.fog_connection.openstack_username:
   description: "Fog provider OpenStack - OpenStack username to access Swift service."
- ccng.droplets.fog_connection.openstack_api_key
+ ccng.droplets.fog_connection.openstack_api_key:
   description: "Fog provider OpenStack - OpenStack password to access Swift."
- ccng.droplets.fog_connection.openstack_temp_url_key
+ ccng.droplets.fog_connection.openstack_temp_url_key:
   description: "Fog provider OpenStack - Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."
  ccng.droplets.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the droplets bucket"
@@ -354,9 +354,9 @@ properties:
   description: "Fog provider OpenStack - Url to your OpenStack Keystone endpoint such as: https://auth.example.de:5000/v2.0/tokens"
  ccng.buildpacks.fog_connection.openstack_username:
   description: "Fog provider OpenStack - OpenStack username to access Swift service."
- ccng.buildpacks.fog_connection.openstack_api_key
+ ccng.buildpacks.fog_connection.openstack_api_key:
   description: "Fog provider OpenStack - OpenStack password to access Swift."
- ccng.buildpacks.fog_connection.openstack_temp_url_key
+ ccng.buildpacks.fog_connection.openstack_temp_url_key:
   description: "Fog provider OpenStack - Secret Swift key used to generate temporary URLs. Can be set using the X-Account-Meta-Temp-URL-Key header."
  ccng.buildpacks.fog_connection.aws_access_key_id:
   description: "AWS access key used to access the buildpacks bucket"
