@@ -141,7 +141,7 @@ resource_pool:
     hp_avl_zone: <%= p("ccng.resource_pool.fog_connection.hp_avl_zone") %>
     hp_auth_version: <%= p("ccng.resource_pool.fog_connection.hp_auth_version") %>
     os_account_meta_temp_url_key: <%= p("ccng.resource_pool.fog_connection.os_account_meta_temp_url_key") %>
-    <% elsif provider.downcase == "openstack %>
+    <% elsif provider.downcase == "openstack" %>
     openstack_auth_url: <%= p("ccng.packages.fog_connection.openstack_auth_url") %>
     openstack_username: <%= p("ccng.packages.fog_connection.openstack_username") %>
     openstack_api_key: <%= p("ccng.packages.fog_connection.openstack_api_key") %>
@@ -174,7 +174,7 @@ packages:
     hp_avl_zone: <%= p("ccng.packages.fog_connection.hp_avl_zone") %>
     hp_auth_version: <%= p("ccng.packages.fog_connection.hp_auth_version") %>
     os_account_meta_temp_url_key: <%= p("ccng.packages.fog_connection.os_account_meta_temp_url_key") %>
-    <% elsif provider.downcase == "openstack %>
+    <% elsif provider.downcase == "openstack" %>
     openstack_auth_url: <%= p("ccng.packages.fog_connection.openstack_auth_url") %>
     openstack_username: <%= p("ccng.packages.fog_connection.openstack_username") %>
     openstack_api_key: <%= p("ccng.packages.fog_connection.openstack_api_key") %>
@@ -207,7 +207,7 @@ droplets:
     hp_avl_zone: <%= p("ccng.droplets.fog_connection.hp_avl_zone") %>
     hp_auth_version: <%= p("ccng.droplets.fog_connection.hp_auth_version") %>
     os_account_meta_temp_url_key: <%= p("ccng.droplets.fog_connection.os_account_meta_temp_url_key") %>
-    <% elsif provider.downcase == "openstack %>
+    <% elsif provider.downcase == "openstack" %>
     openstack_auth_url: <%= p("ccng.packages.fog_connection.openstack_auth_url") %>
     openstack_username: <%= p("ccng.packages.fog_connection.openstack_username") %>
     openstack_api_key: <%= p("ccng.packages.fog_connection.openstack_api_key") %>
@@ -240,7 +240,7 @@ buildpacks:
     hp_avl_zone: <%= p("ccng.buildpacks.fog_connection.hp_avl_zone") %>
     hp_auth_version: <%= p("ccng.buildpacks.fog_connection.hp_auth_version") %>
     os_account_meta_temp_url_key: <%= p("ccng.buildpacks.fog_connection.os_account_meta_temp_url_key") %>
-    <% elsif provider.downcase == "openstack %>
+    <% elsif provider.downcase == "openstack" %>
     openstack_auth_url: <%= p("ccng.packages.fog_connection.openstack_auth_url") %>
     openstack_username: <%= p("ccng.packages.fog_connection.openstack_username") %>
     openstack_api_key: <%= p("ccng.packages.fog_connection.openstack_api_key") %>
